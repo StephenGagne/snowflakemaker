@@ -1,0 +1,32 @@
+Number of main branches = 6 - Constant
+Radius of the polygon = 18 - 20         19 (first part of year)
+Length of main branch = 15 - 31        29 (day + 15 if less than 15)
+Internal offset = radius/4               5  
+Main arm thickness = 1 - 10             5  (month/2)
+Side Branch thickness = 1 - 5           5   (month%2)
+Side Branch Length = 15-40             29  (date (+15 if less than 15))
+Angle of branches = 0 - 45             44  (year (/2 if more than 45))
+
+
+
+
+12012018
+10 14 1987
+10 31 2018
+08021989
+04 28 1991
+9 12 1996
+6 18 1994
+12151978
+12 27 1957
+06 06 1945
+
+19 27 5 6 3 17 29
+20 31 5 5 5 31 18
+19 17 5 4 4 17 45
+19 28 5 2 2 28 45
+19 27 5 5 4 27 45
+19 18 5 3 3 18 45
+19 15 5 6 3 15 39
+20 15 5 6 3 16 18
+
