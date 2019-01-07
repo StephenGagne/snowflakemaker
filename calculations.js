@@ -14,6 +14,23 @@ $submit.addEventListener('click', function () {
       third: Number(number.slice(4, 6)),
       fourth: Number(number.slice(6, 8))
     }
+
+    let numArray = []
+    for (let i = 0; i < number.length; i++) {
+      if (number[i] != 0) {
+        numArray.push(number[i])
+      }
+    }
+    let collector = 0
+    for (const num of numArray) {
+      collector += Number(num)
+    }
+    let numOfPolygons = Math.floor(collector / numArray.length)
+    if (numOfPolygons < 3) {
+      numOfPolygons = 3
+    }
+    console.log(numOfPolygons)
+
     let radius = values.third % 20
     if (radius < 5) {
       radius = 5
@@ -60,17 +77,4 @@ function shift(string) {
   array.push(tail)
   const output = array.join('')
   return output
-}
-
-/* Based on Steve Griffith's array shuffle prototype */
-const shuffle = function (array) {
-  const length = array.length
-  for (let i = 0; i < length; i++) {
-    const temp = array[i]
-    const pos = Math.floor(Math.random() * length)
-    const other = array[pos]
-    array[i] = other
-    array[pos] = temp
-  }
-  return array
 }
