@@ -1,0 +1,36 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+  background-color: #5d6c8c;
+  background-image: url(snowflakes.jpg);
+  background-size: auto 100vh;
+  background-repeat: no-repeat;
+  color: #4f4b43;
+}
+
+h2,
+h1 {
+  color: #ffffee;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.form {
+  border: 2px solid #465573;
+  border-radius: 8px;
+  padding: 2%;
+  background-color: #a3a7bf;
+}
+
+#date {
+  padding: 0.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+#submit {
+  padding: 0.5rem;
+  border-radius: 5px;
+}

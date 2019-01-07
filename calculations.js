@@ -1,6 +1,7 @@
 const $date = document.getElementById('date')
 const $submit = document.getElementById('submit')
 const $output = document.getElementById('output')
+const snowflakes = []
 
 $submit.addEventListener('click', function () {
   let number = $date.value
@@ -57,6 +58,20 @@ $submit.addEventListener('click', function () {
     if (angle > 45) {
       angle = Math.floor(angle / 2)
     }
+
+    let thisFlake = {
+      radius: radius,
+      mainBranchLength: mainBranchLength,
+      offset: offset,
+      mainBranchThickness: mainBranchThickness,
+      angle: angle,
+      sideArmThickness: sideArmThickness,
+      sideArmLength: sideArmLength
+    }
+
+    snowflakes.push(thisFlake)
+    localStorage.snowflakes = JSON.stringify(snowflakes)
+
     $output.innerHTML = (
       `<p><strong>Polygon Radius:</strong> ${radius}</p>
       <p><strong>Main Branch Length:</strong> ${mainBranchLength}</p>
@@ -77,4 +92,8 @@ function shift(string) {
   array.push(tail)
   const output = array.join('')
   return output
+}
+
+function retrieve() {
+  return JSON.parse(localStorage.snowflakes)
 }
